@@ -1,0 +1,15 @@
+<aura:component controller="ListinhaAccController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+            <aura:attribute name="contatos" type="Contact[]"/>
+		<div class="slds-card ">
+                <lightning:button variant="success" label="Busca Contato" title="Buscar contatos" onclick="{!c.chamaContato}"/>
+            	<br/>
+            
+            	<aura.iteration items="{!v.contatos}" var="itensConta">
+                    {!itensConta.Name}
+                    {!itensConta.LastName}<br/>
+                    
+                </aura.iteration>
+           
+        </div>
+</aura:component>
